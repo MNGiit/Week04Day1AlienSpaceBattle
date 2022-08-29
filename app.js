@@ -25,6 +25,17 @@ class Ship {
     // if (Math.random() < alien[0].accuracy) {
     //     console.log('You have been hit!');
     // }
+    // enemyShip attacks playerShip
+    // if(Math.random() < enemyShip.accuracy) {
+    //      console.log("Enemy ship attacked Player ship successfully)
+    //  else console.log("Enemy ship failed to hit Player ship")    
+    // }
+    attackShip() {
+        let attack = Math.random();
+        console.log("Attacker random number:", attack);
+        if(attack < this.accuracy) console.log(`${this.name} attack was successful`)
+        else console.log(`${this.name} missed!`);
+    }
 }
 
 let playerShip = new Ship();
