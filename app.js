@@ -32,8 +32,9 @@ let playerShip = new Ship();
 
 for(let i = 0; i < numberOfEnemyShips; i++) {
     let enemyHull = Math.floor(Math.random() * 4 + 3);
-    console.log(enemyHull);
-    let enemyShip = new Ship("Mothership");
+    let enemyFirepower = Math.floor(Math.random() * 3 + 2);
+    console.log(enemyFirepower);
+    let enemyShip = new Ship("Mothership", enemyHull, enemyFirepower);
     enemyShips.push(enemyShip);
 }
 
