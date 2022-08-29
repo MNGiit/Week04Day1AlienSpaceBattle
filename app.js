@@ -7,36 +7,9 @@ class Ship {
         this.firepower = firepower;
         this.accuracy = accuracy;
     }
-    // hull is the same as hitpoints. If hull reaches 0 or less, the ship is destroyed
-    // firepower is the amount of damage done to the hull of the target with a successful hit
-    // accuracy is the chance between 0 and 1 that the ship will hit its target
-    // Your spaceship, the USS HelloWorld should have the following properties:
-    // hull - 20
-    // firepower - 5
-    // accuracy - .7
 
-    // The alien ships should each have the following ranged properties determined randomly:
-    // hull - between 3 and 6
-    // firepower - between 2 and 4
-    // accuracy - between .6 and .8
-    // You could be battling six alien ships each with unique values.
-
-    // Example use of accuracy to determine a hit:
-    // if (Math.random() < alien[0].accuracy) {
-    //     console.log('You have been hit!');
-    // }
-    // enemyShip attacks playerShip
-    // if(Math.random() < enemyShip.accuracy) {
-    //      console.log("Enemy ship attacked Player ship successfully)
-    //  else console.log("Enemy ship failed to hit Player ship")    
-    // }
     attackShip(s) {
-        let attack = Math.random();
-        // console.log("Attacker random number:", attack);
-        // if(attack < this.accuracy) console.log(`${this.name} attack was successful`)
-        // else console.log(`${this.name} missed!`);
-
-        if(attack < this.accuracy) {this.damageShip(s)}
+        if(Math.random() < this.accuracy) {this.damageShip(s)}
         else console.log(`${this.name} missed!`);
     }
     damageShip(s) {
@@ -61,6 +34,3 @@ for(let i = 0; i < numberOfEnemyShips; i++) {
     let enemyShip = new Ship("Alien Mothership", enemyHull, enemyFirepower, enemyAccuracy);
     enemyShips.push(enemyShip);
 }
-
-// console.log(enemyShips);
-
