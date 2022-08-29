@@ -30,10 +30,13 @@ class Ship {
     //      console.log("Enemy ship attacked Player ship successfully)
     //  else console.log("Enemy ship failed to hit Player ship")    
     // }
-    attackShip() {
+    attackShip(s) {
         let attack = Math.random();
         // console.log("Attacker random number:", attack);
-        if(attack < this.accuracy) console.log(`${this.name} attack was successful`)
+        // if(attack < this.accuracy) console.log(`${this.name} attack was successful`)
+        // else console.log(`${this.name} missed!`);
+
+        if(attack < this.accuracy) {this.damageShip(s)}
         else console.log(`${this.name} missed!`);
     }
     damageShip(s) {
