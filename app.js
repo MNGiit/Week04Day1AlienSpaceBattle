@@ -31,9 +31,11 @@ let playerShip = new Ship();
 // for loop for alien ships
 
 for(let i = 0; i < numberOfEnemyShips; i++) {
+    let enemyHull = Math.floor(Math.random() * 4 + 3);
+    console.log(enemyHull);
     let enemyShip = new Ship("Mothership");
     enemyShips.push(enemyShip);
 }
 
-console.log(enemyShips);
+// console.log(enemyShips);
 
