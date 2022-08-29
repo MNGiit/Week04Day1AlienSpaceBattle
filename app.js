@@ -1,3 +1,5 @@
+let gameOver = false;
+
 let enemyShips = [];
 let numberOfEnemyShips = 6;
 class Ship {
@@ -18,9 +20,15 @@ class Ship {
         s.hull -= this.firepower;
         console.log("Defender hull after attack:", s.hull);
     }
+
+    isDead() {
+        if(this.hull <= 0) return true;
+        else return false;
+    }
 }
 
-let playerShip = new Ship();
+let player = new Ship();
+let isPlayerAlive = true;
 // for loop for alien ships
 
 for(let i = 0; i < numberOfEnemyShips; i++) {
@@ -34,3 +42,21 @@ for(let i = 0; i < numberOfEnemyShips; i++) {
     let enemyShip = new Ship("Alien Mothership", enemyHull, enemyFirepower, enemyAccuracy);
     enemyShips.push(enemyShip);
 }
+
+// let gameOver = false;
+
+// while(!gameOver) {
+//     if(playerShip.hull > 0) playerShip.attackShip(enemyShips[0]);
+//     else gameOver = true;
+// }
+
+// enemy = enemyShips[0]
+let enemy = enemyShips[0];
+// round checks if player is alive
+// if player isn't alive, it is game over
+if(player.hull > 0) {
+    console.log("player is alive");
+    if(enemy.hull > 0) console.log("enemy is alive");
+    else console.log("enemy is dead, prompt player with a choice to continue or not");
+}
+else gameOver = true;
