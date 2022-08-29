@@ -1,3 +1,5 @@
+let enemyShips = [];
+let number0fEnemyShips = 6;
 class Ship {
     constructor(name = "USS HelloWorld", hull = 20, firepower = 5, accuracy = 0.7) {
         this.name = name;
@@ -25,6 +27,7 @@ class Ship {
     // }
 }
 
-let s = new Ship();
-console.log(s);
+let playerShip = new Ship();
+// for loop for alien ships
+
 
