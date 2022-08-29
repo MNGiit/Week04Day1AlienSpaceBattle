@@ -59,4 +59,19 @@ if(player.hull > 0) {
     if(enemy.hull > 0) console.log("enemy is alive");
     else console.log("enemy is dead, prompt player with a choice to continue or not");
 }
-else gameOver = true;
+
+const checkRound = () => {
+    if(player.isDead()) {
+        console.log("Player loses.");
+        gameOver = true;
+        console.log("Game over is:", gameOver);
+    }
+    else if(enemy.isDead()) {
+        console.log("Enemy loses.")
+        gameOver = true;
+        console.log("Game over is:", gameOver);
+    }
+    else {
+        console.log("Both the player and enemy are active");
+    }
+}
