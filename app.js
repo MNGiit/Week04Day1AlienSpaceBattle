@@ -75,3 +75,18 @@ const checkRound = () => {
         console.log("Both the player and enemy are active");
     }
 }
+
+for(let i = 0; i < enemyShips.length; i++) {
+
+}
+
+
+
+const gameRound = () => {
+    while(gameOver === false) {
+        checkRound();
+        // player.hull--; // works
+        // enemy.hull--; // works
+        // NEED OTHER STUFF OR ELSE IT WILL GO ON FOREVEEEEEEEEEEEEEEEEER
+    }
+}
