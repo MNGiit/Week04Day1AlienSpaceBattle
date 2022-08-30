@@ -139,6 +139,12 @@ const start = () => {
 
 const continueAttack = () => {
     alert("Player moves on to the next alien ship.");
+    if(currentEnemy < enemyShips.length) {
+        console.log("Enemy:", enemy);
+        currentEnemy++;
+        enemy = enemyShips[currentEnemy];
+        console.log("Next enemy:", enemy);
+    }
 }
 
 const retreat = () => {
