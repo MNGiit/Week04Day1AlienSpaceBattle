@@ -100,6 +100,7 @@ const gameRound = () => {
         // if the ship survives, ship attacks next
         if(!enemy.isDead()) enemy.attackShip(player);
         // if player survives, continue to next round
+        // updateGameRound();
         checkRound();
     }
     showButtons();
@@ -127,6 +128,7 @@ const start = () => {
     player = new Ship();
     createAlienShips();
     enemy = enemyShips[currentEnemy];
+    updateGameRound();
     gameRound();
 
     // rounds
@@ -138,7 +140,7 @@ const start = () => {
 }
 
 const continueAttack = () => {
-    alert("Player moves on to the next alien ship.");
+    // alert("Player moves on to the next alien ship.");
     if(currentEnemy < enemyShips.length) {
         currentEnemy++;
         enemy = enemyShips[currentEnemy];
