@@ -112,3 +112,7 @@ const continueAttack = () => {
 const retreat = () => {
     alert("Player retreats. Game is over.");
 }
+
+// const GAMEROUND = document.getElementByClassName("gameRoundInfo")
+let round = document.querySelector(".gameRoundInfo")
+round.innerHTML = 9001;
