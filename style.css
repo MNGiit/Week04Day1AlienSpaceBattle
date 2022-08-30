@@ -5,3 +5,8 @@
 .gameBoard {
     border: solid black;
 }
+
+.controls {
+    border: solid blue;
+    display: flex;
+}
