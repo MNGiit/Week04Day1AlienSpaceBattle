@@ -1,5 +1,6 @@
 const ROUND = document.querySelector(".gameRoundInfo")
 const SHIPSREMAINING =  document.querySelector(".shipsRemainingInfo");
+const PLAYERHULL = document.querySelector(".hullInfo");
 
 let currentRound = 0;
 let gameOver = false;
@@ -145,4 +146,8 @@ const updateRemainingShips = () => {
         numberOfEnemyShips--;
         SHIPSREMAINING.innerHTML = numberOfEnemyShips;
     }
+}
+
+const updatePlayerHull = () => {
+    PLAYERHULL.innerHTML = player.hull;
 }
