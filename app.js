@@ -123,6 +123,11 @@ const retreat = () => {
     alert("Player retreats. Game is over.");
 }
 
+const showButtons = () => {
+    document.querySelector(".continueAttack").style.display = "block";
+    document.querySelector(".retreat").style.display = "block";
+}
+
 // ROUND.innerHTML = 9001;
 const updateGameRound = () => {
     currentRound++;
