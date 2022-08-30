@@ -76,17 +76,31 @@ const checkRound = () => {
     }
 }
 
-for(let i = 0; i < enemyShips.length; i++) {
-
-}
-
-
-
 const gameRound = () => {
     while(gameOver === false) {
-        checkRound();
         // player.hull--; // works
         // enemy.hull--; // works
         // NEED OTHER STUFF OR ELSE IT WILL GO ON FOREVEEEEEEEEEEEEEEEEER
+
+        // player attacks first
+        player.attackShip(enemy);
+        // if the ship survives, ship attacks next
+        if(!enemy.isDead()) enemy.attackShip(player);
+        // if player survives, continue to next round
+        checkRound();
     }
+}
+
+const game = () => {
+    console.log(enemyShips);
+    for(let i = 0; i < enemyShips; i++) {
+        console.log("Inside for loop, i:", i);
+        console.log("Inside for loop, enemy:", enemy)
+        console.log("Inside for loop, gameOver:", gameOver)
+        enemy = enemyShips[0];
+        console.log(enemy);
+        gameRound();
+        console.log("Inside for loop, gameOver after gameRound():", gameOver)
+    }
+    console.log("Finished for loop for gameRound(), enemyShips:", enemyShips)
 }
