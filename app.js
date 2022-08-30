@@ -87,7 +87,10 @@ const gameRound = () => {
         // player attacks first
         player.attackShip(enemy);
         // if the ship survives, ship attacks next
-        if(!enemy.isDead()) enemy.attackShip(player);
+        if(!enemy.isDead()) {
+            enemy.attackShip(player);
+            updatePlayerHull();
+        }
         // if player survives, continue to next round
         // updateGameRound();
         checkRound();
@@ -148,6 +151,4 @@ const updateRemainingShips = () => {
     }
 }
 
-const updatePlayerHull = () => {
-    PLAYERHULL.innerHTML = player.hull;
-}
+const updatePlayerHull = () => {PLAYERHULL.innerHTML = player.hull;}
