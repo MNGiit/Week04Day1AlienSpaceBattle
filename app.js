@@ -106,5 +106,9 @@ const game = () => {
 }
 
 const continueAttack = () => {
-    alert("Player moves on to the next alien ship.")
+    alert("Player moves on to the next alien ship.");
+}
+
+const retreat = () => {
+    alert("Player retreats. Game is over.");
 }
