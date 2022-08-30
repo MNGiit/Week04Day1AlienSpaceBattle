@@ -128,6 +128,8 @@ const start = () => {
     player = new Ship();
     createAlienShips();
     enemy = enemyShips[currentEnemy];
+    numberOfEnemyShips = enemyShips.length;
+    
     updateGameRound();
     gameRound();
 
