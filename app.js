@@ -140,10 +140,9 @@ const start = () => {
 const continueAttack = () => {
     alert("Player moves on to the next alien ship.");
     if(currentEnemy < enemyShips.length) {
-        console.log("Enemy:", enemy);
         currentEnemy++;
         enemy = enemyShips[currentEnemy];
-        console.log("Next enemy:", enemy);
+        hideButtons();
     }
 }
 
@@ -154,6 +153,11 @@ const retreat = () => {
 const showButtons = () => {
     document.querySelector(".continueAttack").style.display = "block";
     document.querySelector(".retreat").style.display = "block";
+}
+
+const hideButtons = () => {
+    document.querySelector(".continueAttack").style.display = "none";
+    document.querySelector(".retreat").style.display = "none";    
 }
 
 // ROUND.innerHTML = 9001;
