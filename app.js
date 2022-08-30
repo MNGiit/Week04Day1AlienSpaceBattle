@@ -1,5 +1,9 @@
 const ROUND = document.querySelector(".gameRoundInfo")
+const SHIPSREMAINING =  document.querySelector(".shipsRemainingInfo");
+
+
 let currentRound = 0;
+
 let gameOver = false;
 
 let enemyShips = [];
