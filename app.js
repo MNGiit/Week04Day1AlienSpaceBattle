@@ -83,6 +83,7 @@ const checkRound = () => {
         // gameOver = true;
         roundOver = true;
         console.log("Game over is:", gameOver);
+        updateRemainingShips();
     }
     else {
         console.log("Both the player and enemy are active");
@@ -129,7 +130,7 @@ const start = () => {
     createAlienShips();
     enemy = enemyShips[currentEnemy];
     numberOfEnemyShips = enemyShips.length;
-    
+
     updateGameRound();
     gameRound();
 
@@ -172,4 +173,11 @@ const hideButtons = () => {
 const updateGameRound = () => {
     currentRound++;
     ROUND.innerHTML = currentRound;
+}
+
+const updateRemainingShips = () => {
+    if(numberOfEnemyShips>0) {
+        numberOfEnemyShips--;
+        SHIPSREMAINING.innerHTML = numberOfEnemyShips;
+    }
 }
