@@ -122,7 +122,8 @@ const start = () => {
     // rounds
     for(let i = 0; i < enemyShips.length; i++) {
         enemy = enemyShips[i];
-        console.log(enemy);
+        // console.log(enemy);
+        gameRound();
     }
 }
 
