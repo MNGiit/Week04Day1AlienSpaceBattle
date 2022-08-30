@@ -113,10 +113,17 @@ const game = () => {
 
 // buttons
 const start = () => {
-    alert("Game will start!");
-    console.log(enemyShips);
+    gameOver = false;
+    
+    // create ships
+    player = new Ship();
     createAlienShips();
-    console.log(enemyShips);
+
+    // rounds
+    for(let i = 0; i < enemyShips.length; i++) {
+        enemy = enemyShips[i];
+        console.log(enemy);
+    }
 }
 
 const continueAttack = () => {
