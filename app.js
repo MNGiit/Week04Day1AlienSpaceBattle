@@ -143,7 +143,10 @@ const continueAttack = () => {
         currentEnemy++;
         enemy = enemyShips[currentEnemy];
         hideButtons();
+        roundOver = false;
+        gameRound();
     }
+    else console.log("There are no more enemies left!");
 }
 
 const retreat = () => {
