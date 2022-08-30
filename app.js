@@ -1,17 +1,13 @@
 const ROUND = document.querySelector(".gameRoundInfo")
 const SHIPSREMAINING =  document.querySelector(".shipsRemainingInfo");
 
-
 let currentRound = 0;
-
 let gameOver = false;
 let roundOver = false;
 
 let enemyShips = [];
 let numberOfEnemyShips = 6;
 let currentEnemy = 0;
-
-let shouldShowButtons = false;
 
 class Ship {
     constructor(name = "USS HelloWorld", hull = 20, firepower = 5, accuracy = 0.7) {
@@ -40,7 +36,6 @@ class Ship {
 
 let player = new Ship();
 let isPlayerAlive = true;
-// for loop for alien ships
 
 const createAlienShips = () => {
     for(let i = 0; i < numberOfEnemyShips; i++) {
@@ -53,13 +48,6 @@ const createAlienShips = () => {
         enemyShips.push(enemyShip);
     }
 }
-
-// let gameOver = false;
-
-// while(!gameOver) {
-//     if(playerShip.hull > 0) playerShip.attackShip(enemyShips[0]);
-//     else gameOver = true;
-// }
 
 // enemy = enemyShips[0]
 let enemy = enemyShips[0];
@@ -79,8 +67,7 @@ const checkRound = () => {
         console.log("Game over is:", gameOver);
     }
     else if(enemy.isDead()) {
-        console.log("Enemy loses.")
-        // gameOver = true;
+        console.log("Enemy loses.");
         roundOver = true;
         console.log("Game over is:", gameOver);
         updateRemainingShips();
@@ -119,13 +106,6 @@ const start = () => {
 
     updateGameRound();
     gameRound();
-
-    // rounds
-    // for(let i = 0; i < enemyShips.length; i++) {
-    //     enemy = enemyShips[i];
-    //     // console.log(enemy);
-    //     gameRound();
-    // }
 }
 
 const continueAttack = () => {
@@ -155,7 +135,6 @@ const hideButtons = () => {
     document.querySelector(".retreat").style.display = "none";    
 }
 
-// ROUND.innerHTML = 9001;
 const updateGameRound = () => {
     currentRound++;
     ROUND.innerHTML = currentRound;
