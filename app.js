@@ -66,6 +66,7 @@ const checkRound = () => {
         gameOver = true;
         roundOver = true;
         console.log("Game over is:", gameOver);
+        showStart();
     }
     else if(enemy.isDead()) {
         console.log("Enemy loses.");
@@ -133,6 +134,8 @@ const showButtons = () => {
     document.querySelector(".continueAttack").style.display = "block";
     document.querySelector(".retreat").style.display = "block";
 }
+
+const showStart = () => {document.querySelector(".start").style.display = "block";}
 
 const hideButtons = () => {
     document.querySelector(".continueAttack").style.display = "none";
