@@ -12,3 +12,11 @@
     border: solid blue;
     display: flex;
 }
+
+.continueAttack {
+    display: none;
+}
+
+.retreat {
+    display: none;
+}
