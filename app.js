@@ -60,11 +60,11 @@ const createAlienShips = () => {
 let enemy = enemyShips[0];
 // round checks if player is alive
 // if player isn't alive, it is game over
-if(player.hull > 0) {
-    console.log("player is alive");
-    if(enemy.hull > 0) console.log("enemy is alive");
-    else console.log("enemy is dead, prompt player with a choice to continue or not");
-}
+// if(player.hull > 0) {
+//     console.log("player is alive");
+//     if(enemy.hull > 0) console.log("enemy is alive");
+//     else console.log("enemy is dead, prompt player with a choice to continue or not");
+// }
 
 const checkRound = () => {
     if(player.isDead()) {
@@ -114,7 +114,11 @@ const game = () => {
 // buttons
 const start = () => {
     alert("Game will start!");
+    console.log(enemyShips);
+    createAlienShips();
+    console.log(enemyShips);
 }
+
 const continueAttack = () => {
     alert("Player moves on to the next alien ship.");
 }
