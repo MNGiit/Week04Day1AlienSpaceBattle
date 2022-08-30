@@ -146,6 +146,7 @@ const continueAttack = () => {
         enemy = enemyShips[currentEnemy];
         hideButtons();
         roundOver = false;
+        updateGameRound();
         gameRound();
     }
     else console.log("There are no more enemies left!");
