@@ -111,6 +111,10 @@ const game = () => {
     console.log("Finished for loop for gameRound(), enemyShips:", enemyShips)
 }
 
+// buttons
+const start = () => {
+    alert("Game will start!");
+}
 const continueAttack = () => {
     alert("Player moves on to the next alien ship.");
 }
