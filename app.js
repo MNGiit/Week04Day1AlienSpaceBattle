@@ -95,6 +95,7 @@ const gameRound = () => {
         // if player survives, continue to next round
         checkRound();
     }
+    showButtons();
 }
 
 const game = () => {
