@@ -104,3 +104,7 @@ const game = () => {
     }
     console.log("Finished for loop for gameRound(), enemyShips:", enemyShips)
 }
+
+const continueAttack = () => {
+    alert("Player moves on to the next alien ship.")
+}
