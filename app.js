@@ -37,16 +37,16 @@ let player = new Ship();
 let isPlayerAlive = true;
 // for loop for alien ships
 
-for(let i = 0; i < numberOfEnemyShips; i++) {
-    let enemyHull = Math.floor(Math.random() * 4 + 3);
-    let enemyFirepower = Math.floor(Math.random() * 3 + 2);
-    // let enemyAccuracy = Math.random() * 0.2 + 0.6009;
-    // let enemyAccuracy = (Math.floor(Math.random() * 80 + 20))/100;
-    let enemyAccuracy = (Math.floor(Math.random() * 3 + 6))/10;
-
-    console.log(enemyAccuracy);
-    let enemyShip = new Ship("Alien Mothership", enemyHull, enemyFirepower, enemyAccuracy);
-    enemyShips.push(enemyShip);
+const createAlienShips = () => {
+    for(let i = 0; i < numberOfEnemyShips; i++) {
+        let enemyHull = Math.floor(Math.random() * 4 + 3);
+        let enemyFirepower = Math.floor(Math.random() * 3 + 2);
+        // let enemyAccuracy = Math.random() * 0.2 + 0.6009;
+        // let enemyAccuracy = (Math.floor(Math.random() * 80 + 20))/100;
+        let enemyAccuracy = (Math.floor(Math.random() * 3 + 6))/10;
+        let enemyShip = new Ship("Alien Mothership", enemyHull, enemyFirepower, enemyAccuracy);
+        enemyShips.push(enemyShip);
+    }
 }
 
 // let gameOver = false;
