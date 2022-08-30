@@ -107,20 +107,6 @@ const gameRound = () => {
     showButtons();
 }
 
-const game = () => {
-    console.log(enemyShips);
-    for(let i = 0; i < enemyShips; i++) {
-        console.log("Inside for loop, i:", i);
-        console.log("Inside for loop, enemy:", enemy)
-        console.log("Inside for loop, gameOver:", gameOver)
-        enemy = enemyShips[0];
-        console.log(enemy);
-        gameRound();
-        console.log("Inside for loop, gameOver after gameRound():", gameOver)
-    }
-    console.log("Finished for loop for gameRound(), enemyShips:", enemyShips)
-}
-
 // buttons
 const start = () => {
     gameOver = false;
