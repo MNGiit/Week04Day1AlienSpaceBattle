@@ -1,5 +1,7 @@
 .dataBoard {
     border: solid gray;
+    display: flex;
+    justify-content: space-between;
 }
 
 .gameBoard {
