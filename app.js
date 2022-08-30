@@ -1,3 +1,5 @@
+const ROUND = document.querySelector(".gameRoundInfo")
+let currentRound = 0;
 let gameOver = false;
 
 let enemyShips = [];
@@ -113,6 +115,8 @@ const retreat = () => {
     alert("Player retreats. Game is over.");
 }
 
-// const GAMEROUND = document.getElementByClassName("gameRoundInfo")
-let round = document.querySelector(".gameRoundInfo")
-round.innerHTML = 9001;
+// ROUND.innerHTML = 9001;
+const updateGameRound = () => {
+    currentRound++;
+    ROUND.innerHTML = currentRound;
+}
